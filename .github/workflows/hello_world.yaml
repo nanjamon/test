@@ -13,11 +13,14 @@ jobs:
      - id: s00
        name: Say Hello
        # running some bash command in linux
-       run: echo "current time in github is $(date)"
+       run: echo "current time in github is $(date), ${GITHUB_OUTPUT}"
      - id: s01
+       # create a value to pass to next step
+       run: echo "CURR_DATE=$(date)" >> $GITHUB_OUTPUT
+     - id: s02
        uses: mscoutermarsh/cowsays-action@master
        with:
-          text: 'ship ship ship!'
+          text: 'Moo moo cow! ${{ steps.s01.outputs.CURR_DATE}}'
           color: 'red'
      # - id: s01
      #   run: ls -al
