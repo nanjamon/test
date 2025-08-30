@@ -15,6 +15,11 @@ jobs:
        # running some bash command in linux
        run: echo "current time in github is $(date)"
      - id: s01
-       run: ls -al
-     - id: s02
-       run: cat hello.txt
+       uses: mscoutermarsh/cowsays-action@master
+        with:
+          text: 'ship ship ship!'
+          color: 'red'
+     # - id: s01
+     #   run: ls -al
+     # - id: s02
+     #   run: cat hello.txt
