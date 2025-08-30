@@ -20,8 +20,9 @@ jobs:
      - id: s02
        uses: mscoutermarsh/cowsays-action@master
        with:
-          text: 'Moo moo cow! ${{ steps.s01.outputs.CURR_DATE}}'
+          text: 'Moo moo cow! ${{ steps.s01.outputs.CURR_DATE}}, ${{ github.ref}}, ${{github.repository}}'
           color: 'red'
+
      # - id: s01
      #   run: ls -al
      # - id: s02
