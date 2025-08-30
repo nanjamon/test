@@ -14,3 +14,7 @@ jobs:
        name: Say Hello
        # running some bash command in linux
        run: echo "current time in github is $(date)"
+     - id: s01
+        run: cat hello.txt
+     - id: s02
+       run: ls hello.txt
