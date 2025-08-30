@@ -16,7 +16,7 @@ jobs:
        run: echo "current time in github is $(date)"
      - id: s01
        uses: mscoutermarsh/cowsays-action@master
-        with:
+       with:
           text: 'ship ship ship!'
           color: 'red'
      # - id: s01
